@@ -1,4 +1,3 @@
-// pages/Dashboard.js
 import React from 'react';
 import {
   Box,
@@ -90,11 +89,12 @@ const Dashboard = () => {
                   />
                   <YAxis />
                   <Tooltip
-                    formatter={(value, name) => [
-                      `${value}${name === 'timeInRange' ? '%' : ' mg/dL'}`,
-                      name === 'timeInRange' ? 'Time in Range' : 'Average Glucose'
-                    ]}
-                  />
+  formatter={(value, name) => [
+    `${value}${name === 'timeInRange' ? '%' : ' mg/dL'}`, // Proper string interpolation
+    name === 'timeInRange' ? 'Time in Range' : 'Average Glucose'
+  ]}
+/>
+
                   <Area
                     type="monotone"
                     dataKey="timeInRange"
